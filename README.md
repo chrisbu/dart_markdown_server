@@ -9,8 +9,15 @@ It uses the dartdoc markdown parser from the Dart SDK to perform the conversion.
 ## Usage:
 This package is both a library and an application.  
 
-### Library Usage:
+### Library usage:
+Your pubspec dependency should look like the following
     
+    dependencies:
+      markdown_server:
+        git: git://github.com/chrisbu/dart_markdown_server.git
+
+And your code can use the package as follows:
+   
     import "dart:io";
     import "package:markdown_server/markdown_server_lib.dart" as md;
     
