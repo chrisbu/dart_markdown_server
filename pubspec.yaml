@@ -1,0 +1,9 @@
+name:  markdown_server
+description: >
+  A library and application to serve markdown and other static files
+dependencies:
+  dartdoc:
+    sdk: dartdoc
+  args:
+    sdk: args 
+
