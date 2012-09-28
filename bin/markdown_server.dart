@@ -21,7 +21,7 @@ ArgResults _getArgs() {
   parser.addOption("port", abbr:"p", help:"The port to listen to", defaultsTo: "8080");
   
   final options = new Options();
-  if (options.arguments == 0) {
+  if (options.arguments.length == 0) {
     print(parser.getUsage());
     return null;
   }

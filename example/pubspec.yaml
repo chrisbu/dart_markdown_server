@@ -1,0 +1,4 @@
+name: An Example Server
+dependencies:
+  markdown_server:
+    git: git://github.com/chrisbu/dart_markdown_server.git
