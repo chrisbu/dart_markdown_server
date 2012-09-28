@@ -1,6 +1,10 @@
 name:  markdown_server
 description: >
-  A library and application to serve markdown and other static files
+  A library and application to serve markdown and other static files.  
+  Uses the dartdoc markdown parser to dynamically parse a markdown file
+  in response to a html file request.
+author: Chris Buckett <chrisbuckett@gmail.com>
+version: 1.0.0
 dependencies:
   dartdoc:
     sdk: dartdoc
