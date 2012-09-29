@@ -2,21 +2,27 @@
 
 /// Exte
 class MarkdownServer extends StaticServer {
-  MarkdownServer(final root) : super(root, "md");
-  
-  String _processContent(final String content) {
-    print("Converting content from md to html");
-    return markdownToHtml(content);
+  MarkdownServer(final rootPath) : super(rootPath, "md");
+
+  String processContent(final String content) {
+    print("Converting content: from md to html");
+    String result =  markdownToHtml(content);
+    return """
+<html><head><title>Converted from markdown</title>
+  <body><!-- Converted from markdown, starts below-->
+$result
+  <!-- Conversion from markdown, end --></body> 
+</html>""";
   }
-  
-  String _getContentType(path) {
+
+  String getContentType(path) {
     return "text/html";
   }
-  
-  String _modifyFileExtension(String path) {
-    final oldPath = path;
-    path = path.replaceAll(".html", ".md").replaceAll(".htm", ".md");
-    print("Converting: $oldPath > $path");
-    return path;
+
+  String modifyFileExtension(String path) {
+    return path
+        .replaceAll(".html", ".$_extensionFilter")
+        .replaceAll(".htm", ".$_extensionFilter");
   }
+
 }

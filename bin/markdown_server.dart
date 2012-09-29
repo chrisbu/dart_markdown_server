@@ -14,12 +14,12 @@ void main() {
 
 
 ArgResults _getArgs() {
-  
+
   final parser = new ArgParser();
   parser.addOption("root", abbr:"r", help:"The root path to serve", defaultsTo: "/");
   parser.addOption("host", abbr:"h", help:"The host IP to listen on", defaultsTo: "127.0.0.1");
   parser.addOption("port", abbr:"p", help:"The port to listen to", defaultsTo: "8080");
-  
+
   final options = new Options();
   if (options.arguments.length == 0) {
     print(parser.getUsage());
