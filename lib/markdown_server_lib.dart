@@ -9,6 +9,8 @@
 #source("src/static_server.dart");
 #source("src/mime_types.dart");
 
+/// Adds a [MarkdownServer] and a [StaticServer] instance to serve all files
+/// that are in the [rootPath] folder.  Listens on [host] and [port] supplied.
 runServer(String rootPath, String host, int port) {
   final server = new HttpServer();
 
@@ -25,8 +27,8 @@ runServer(String rootPath, String host, int port) {
 }
 
 
-
-void _notFoundHandler(req,HttpResponse res) {
+/// Default 404 not found handler
+void _notFoundHandler(req,res) {
   res.statusCode = 404;
   res.outputStream.writeString("${req.path}\n404 - not found""");
   res.outputStream.close();

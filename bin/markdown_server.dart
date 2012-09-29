@@ -2,6 +2,8 @@
 import "package:args/args.dart";
 import "package:markdown_server/markdown_server_lib.dart" as server;
 
+/// Provided as an application to extract parameters from the command line and
+/// serve both markdown and regular files in the rootPath provided.
 void main() {
   var args = _getArgs();
   if (args != null) {

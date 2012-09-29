@@ -1,6 +1,8 @@
 // part of markdown_server
 
-
+/// Provided to setup some default mime types.
+/// This can be subclassed as required to add your own custom mime types
+/// and passed into the StaticServer constructor
 class MimeTypes {
   final _mimeTypes = new Map<String,String>();
   final String _defaultIfNotFound;
