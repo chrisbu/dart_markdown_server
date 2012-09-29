@@ -33,7 +33,8 @@ class StaticServer {
   /// not be passed through the [processContent] method.  Instead, they will
   /// be simply piped to the http response output stream
   /// - [textTypes] is a [MimeTypes] object containing a list of file types
-  /// containing string types.
+  /// containing string types.  These are read as strings, and passed through
+  /// the [processContent] method.
   StaticServer(final String rootPath,
       [this._extensionFilter=null,
        this._binaryTypes = null,
