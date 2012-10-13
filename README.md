@@ -34,3 +34,7 @@ And your code can use the package as follows:
 From the command line, which serves both markdown and non markdown files
 
     dart markdown_server.dart -h 127.0.0.1 -p 8080 -r /path/to/serve/
+
+### Note:
+
+YMMV on windows, due to http://dartbug.com/5559
