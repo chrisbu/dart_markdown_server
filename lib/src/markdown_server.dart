@@ -1,4 +1,4 @@
-// part of markdown_server;
+part of markdown_server;
 
 /// Subclass of StaticServer, which converts the `.html` or `.htm` requests
 /// into a `.md` request.  The `.md` file, if found, is converted using the

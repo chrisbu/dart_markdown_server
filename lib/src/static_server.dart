@@ -1,4 +1,4 @@
-// part of markdown_server;
+part of markdown_server;
 
 /// A simple static file server which is capable of serving text and binary
 /// files.

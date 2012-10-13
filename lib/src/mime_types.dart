@@ -1,4 +1,4 @@
-// part of markdown_server
+part of markdown_server;
 
 /// Provided to setup some default mime types.
 /// This can be subclassed as required to add your own custom mime types

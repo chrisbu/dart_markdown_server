@@ -1,13 +1,11 @@
-#library("markdown_server");
+library markdown_server;
 
-#import("package:dartdoc/markdown.dart");
-#import("dart:io");
+import "package:dartdoc/markdown.dart";
+import "dart:io";
 
-//part "src/markdown_server.dart";
-//part "src/static_server.dart";
-#source("src/markdown_server.dart");
-#source("src/static_server.dart");
-#source("src/mime_types.dart");
+part "src/markdown_server.dart";
+part "src/static_server.dart";
+part "src/mime_types.dart";
 
 /// Adds a [MarkdownServer] and a [StaticServer] instance to serve all files
 /// that are in the [rootPath] folder.  Listens on [host] and [port] supplied.
